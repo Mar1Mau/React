@@ -1,0 +1,23 @@
+.main {
+    align-content: center;
+    border: 5px solid black;
+    width:220px;
+    height:500px;
+ }
+
+ button{
+    background-color: #e7e7e7;
+     color: black;
+    border: none;
+    
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+ }
+
+ td{
+     width:150px;
+     height:120px;
+ }
