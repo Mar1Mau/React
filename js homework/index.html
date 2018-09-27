@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+
+        <script>
+
+                const delay = ms => new Promise(resolve => setTimeout(resolve, ms, console.log(ms + " mseconds")));
+        
+        
+                async function getResult() {
+        
+                    let res = await fetch(`https://jsonplaceholder.typicode.com/photos`);
+                    let data = await res.json();
+        
+                    for (let i = 0; i < data.length; i++) {
+        
+                        console.log("----------------------------------------");
+        
+                        await delay((data[i].id * 1000), console.log("id = " + data[i].id ));
+        
+                    }
+        
+                }
+                getResult()
+        
+            </script>
+
+</head>
+
+<body></body>
+
+</html>
