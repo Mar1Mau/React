@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="build/browser.min.js"></script>
+</head>
+
+<body>
+
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+      // {} in jsx renders js code
+      ReactDOM.render(
+       <table>
+            { Array.from(Array(10)).map((tr, tr_i) => 
+            <tr> 
+              { Array.from(Array(10)).map((a, td_i, arr) => 
+                  <td>{(td_i+1)*(tr_i+1)}</td>
+               )}
+            </tr>
+        )}
+       
+      </table>,
+        document.getElementById('root')
+      );
+    </script>
+
+</body>
+
+</html>
